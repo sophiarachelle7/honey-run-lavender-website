@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honey Run Lavender · Butte Creek Canyon, Chico</title>
+<meta name="description" content="An organic, permaculture-based lavender farm growing in Butte Creek Canyon, Chico. Opening for U-pick, photos and small events in 2030.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --haze:#ebe6f1;
+    --dusk:#4b3b6b;
+    --bloom:#8a72b5;
+    --stem:#6f7d5c;
+    --honey:#d9a441;
+    --ink:#2b2433;
+    --display:"Young Serif", Georgia, serif;
+    --body:"Figtree", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--haze);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+  a{color:var(--dusk)}
+  :focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+  .wrap{width:min(1120px,100% - 3rem);margin-inline:auto}
+
+  header.bar{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 0}
+  .logo{display:flex;align-items:center;gap:.6rem;font-family:var(--display);font-size:1.2rem;color:var(--dusk);text-decoration:none}
+  .logo svg{width:26px;height:26px}
+  .bar .contact{font-size:.95rem;color:var(--ink)}
+
+  /* Hero */
+  .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:end;padding:3rem 0 0}
+  .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.8rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.02em;margin:0;color:var(--dusk)}
+  .hero .intro{font-size:1.2rem;max-width:44ch;margin:1.75rem 0 2rem}
+  .hero-art{align-self:stretch;display:flex;justify-content:center}
+  .hero-art svg{height:min(560px,70vh);width:auto;overflow:visible}
+
+  .signup{display:flex;max-width:470px;background:#fff;border-radius:14px;padding:.35rem;box-shadow:0 0 0 1px #d6cde3}
+  .signup label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .signup input{flex:1;min-width:0;font:inherit;border:0;background:transparent;padding:.75rem .9rem;color:var(--ink)}
+  .signup input:focus-visible{outline:none}
+  .signup:focus-within{box-shadow:0 0 0 2px var(--dusk)}
+  .signup button{font:600 1rem var(--body);border:0;border-radius:10px;padding:.75rem 1.2rem;background:var(--honey);color:var(--ink);cursor:pointer;white-space:nowrap}
+  .signup button:hover{background:#c99230}
+  .form-note{font-size:.92rem;margin:.6rem 0 0;min-height:1.4em}
+
+  /* Story band */
+  .story{background:var(--dusk);color:#f1ecf7;padding:clamp(4rem,9vw,7rem) 0;margin-top:-1px}
+  .story .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem)}
+  .story h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4vw,2.9rem);line-height:1.1;margin:0;color:#fff}
+  .story .big{font-family:var(--display);font-size:clamp(1.3rem,2.2vw,1.6rem);line-height:1.45;color:#e2d6f2;margin:1.5rem 0 0}
+  .story p{max-width:60ch;margin:0 0 1.1em}
+  .story a{color:var(--honey)}
+
+  /* Timeline along a stem */
+  .grow{padding:clamp(4rem,9vw,7rem) 0}
+  .grow h2,.open h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4vw,2.9rem);line-height:1.1;color:var(--dusk);margin:0 0 .75rem}
+  .grow .lead{max-width:56ch;margin:0 0 3rem}
+  .stem{list-style:none;margin:0;padding:0 0 0 3.25rem;position:relative;max-width:720px}
+  .stem::before{content:"";position:absolute;left:14px;top:.5rem;bottom:.5rem;width:4px;border-radius:2px;background:var(--stem)}
+  .stem li{position:relative;padding-bottom:2.5rem}
+  .stem li:last-child{padding-bottom:0}
+  .bud{position:absolute;left:-3.25rem;top:.1rem;width:32px;height:40px}
+  .stem .when{font-family:var(--display);font-size:1.5rem;color:var(--dusk)}
+  .stem h3{font:600 1.1rem var(--body);margin:.15rem 0 .3rem}
+  .stem p{margin:0;max-width:52ch}
+  .stem li.here .when::after{content:"We are here";font:600 .8rem var(--body);background:var(--honey);color:var(--ink);border-radius:999px;padding:.2rem .6rem;margin-left:.75rem;vertical-align:middle}
+
+  /* Offerings */
+  .open{background:#f6f3f9;padding:clamp(4rem,9vw,7rem) 0}
+  .open .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem 3rem;margin-top:2.5rem}
+  .open h3{font:600 1.1rem var(--body);margin:0 0 .3rem;color:var(--dusk)}
+  .open p{margin:0}
+  .open .where{margin-top:3rem;padding-top:2rem;border-top:2px solid #ddd3ea;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:center}
+  .open .where p{max-width:50ch}
+
+  footer{background:var(--dusk);color:#e2d6f2;padding:3rem 0}
+  footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.95rem}
+  footer a{color:#fff}
+
+  /* One orchestrated moment: the stalk blooms bud by bud on load */
+  .floret{transform-box:fill-box;transform-origin:center;animation:open .5s cubic-bezier(.3,1.4,.5,1) both}
+  @keyframes open{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+  @media (prefers-reduced-motion:reduce){.floret{animation:none}}
+
+  @media (max-width:860px){
+    .hero{grid-template-columns:minmax(0,1fr)}
+    .hero-art{display:none}
+    .story .wrap{grid-template-columns:1fr}
+    .open .grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:520px){.open .grid{grid-template-columns:1fr}.bar .contact{display:none}}
+</style>
+</head>
+<body>
+
+<div style="background:var(--haze)">
+  <div class="wrap">
+    <header class="bar">
+      <a class="logo" href="#" aria-label="Honey Run Lavender home">
+        <svg viewBox="0 0 26 26" aria-hidden="true"><path d="M13 25V9" stroke="#6f7d5c" stroke-width="2" stroke-linecap="round"/><g fill="#8a72b5"><ellipse cx="13" cy="4" rx="2.6" ry="3.4"/><ellipse cx="10" cy="8" rx="2.4" ry="3"/><ellipse cx="16" cy="8" rx="2.4" ry="3"/><ellipse cx="13" cy="11" rx="2.4" ry="2.8"/></g></svg>
+        Honey Run Lavender
+      </a>
+      <a class="contact" href="mailto:sophiarachelle7@gmail.com">Say hello</a>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>A lavender farm is growing in Butte Creek Canyon.</h1>
+        <p class="intro">Honey Run Lavender is an organic, permaculture farm near the Honey Run Covered Bridge in Chico. The first plants go in next year. The gate opens in 2030.</p>
+        <form class="signup" data-signup>
+          <label for="email-hero">Email address</label>
+          <input id="email-hero" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit">Send me updates</button>
+        </form>
+        <p class="form-note" aria-live="polite"></p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg id="stalk" viewBox="0 0 220 560"></svg>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <section class="story">
+    <div class="wrap">
+      <div>
+        <h2>Chico's first lavender farm</h2>
+        <p class="big">There's no commercial lavender farm in Chico. The nearest are an hour and a half up the road. We'd like to change that.</p>
+      </div>
+      <div>
+        <p>I'm Sophia Somers. I fell for homesteading at 22, working on a permaculture farm in Costa Rica, and I've grown food in Hawai'i since. I studied Environmental Science at Chico State, and my day job is in conservation for the Butte Creek watershed, the same creek that runs past this farm.</p>
+        <p>Honey Run Lavender is the place I've wanted to build for a long time. A small homestead that cares for the canyon's land, with lavender at its center and bees, a garden and good company around it. A place to slow down, take a photograph, and feel like you belong.</p>
+        <p>Have a question or want to collaborate? <a href="mailto:sophiarachelle7@gmail.com">Write to me</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="grow">
+    <div class="wrap">
+      <h2>How the farm grows</h2>
+      <p class="lead">Lavender needs about three years to reach a full harvest. Here's the road from license to open gate.</p>
+      <ol class="stem">
+        <li class="here"><svg class="bud" viewBox="0 0 32 40" aria-hidden="true"><ellipse cx="16" cy="20" rx="9" ry="13" fill="#d9a441"/></svg>
+          <div class="when">2026</div><h3>Licensed and planning</h3><p>Honey Run Lavender is registered in Chico, and the farm plan and funding are coming together.</p></li>
+        <li><svg class="bud" viewBox="0 0 32 40" aria-hidden="true"><ellipse cx="16" cy="20" rx="9" ry="13" fill="#8a72b5"/></svg>
+          <div class="when">2027</div><h3>800 plants in the ground</h3><p>Grosso, Phenomenal, Spanish and French lavender start in a greenhouse in spring and are planted out in September.</p></li>
+        <li><svg class="bud" viewBox="0 0 32 40" aria-hidden="true"><ellipse cx="16" cy="20" rx="9" ry="13" fill="#8a72b5"/></svg>
+          <div class="when">2028–29</div><h3>Building the homestead</h3><p>The apiary, organic garden and gathering spaces take shape while the lavender fills out.</p></li>
+        <li><svg class="bud" viewBox="0 0 32 40" aria-hidden="true"><ellipse cx="16" cy="20" rx="9" ry="13" fill="#4b3b6b"/></svg>
+          <div class="when">2030</div><h3>Open to visitors</h3><p>U-pick, photo sessions, small events, workshops and lavender goods made on the farm.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="open">
+    <div class="wrap">
+      <h2>When the gate opens</h2>
+      <div class="grid">
+        <div><h3>U-pick lavender</h3><p>Walk the rows and cut your own bundles in June bloom.</p></div>
+        <div><h3>Photo sessions</h3><p>A backdrop for graduation, family, engagement and portrait shoots.</p></div>
+        <div><h3>Small gatherings</h3><p>Intimate celebrations and events on the farm.</p></div>
+        <div><h3>Workshops</h3><p>Hands-on beekeeping, organic gardening and lavender crafts.</p></div>
+        <div><h3>Lavender goods</h3><p>Essential oil, syrups, soaps, beeswax candles and lavender honey.</p></div>
+        <div><h3>Local partners</h3><p>Lavender for Chico's bakeries, restaurants, boutiques and markets.</p></div>
+      </div>
+      <div class="where">
+        <p>We'll write when the first starts sprout, on planting day, and when there's a date to visit. Nothing more.</p>
+        <div style="flex:1 1 320px;max-width:470px">
+          <form class="signup" data-signup>
+            <label for="email-foot">Email address</label>
+            <input id="email-foot" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button type="submit">Send me updates</button>
+          </form>
+          <p class="form-note" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Honey Run Lavender, Butte Creek Canyon, Chico, California</span>
+    <a href="mailto:sophiarachelle7@gmail.com">sophiarachelle7@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+/* A single lavender stalk with a bee, blooming from the bottom up */
+(function(){
+  const svg=document.getElementById('stalk'),NS='http://www.w3.org/2000/svg';
+  const el=(n,a)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);svg.appendChild(e);return e};
+  el('path',{d:'M110 560 C 108 420, 116 300, 112 120',stroke:'#6f7d5c','stroke-width':5,fill:'none','stroke-linecap':'round'});
+  el('path',{d:'M111 470 C 80 450, 60 420, 54 380',stroke:'#6f7d5c','stroke-width':4,fill:'none','stroke-linecap':'round'});
+  el('path',{d:'M111 430 C 140 410, 158 385, 164 350',stroke:'#6f7d5c','stroke-width':4,fill:'none','stroke-linecap':'round'});
+  const shades=['#4b3b6b','#5f4a86','#735ea0','#8a72b5','#a48fcb'];
+  let n=0;
+  for(let i=0;i<14;i++){
+    const y=330-i*16, spread=Math.max(10,26-i*1.2), sz=Math.max(7,15-i*.55);
+    [-1,1,0].forEach((side,j)=>{
+      if(side===0 && i%2) return;
+      const g=el('g',{transform:`rotate(${side*22} ${112+side*spread*.6} ${y})`});
+      const f=document.createElementNS(NS,'ellipse');
+      for(const [k,v] of Object.entries({cx:112+side*spread*.6,cy:y-(side===0?8:0),rx:sz*.72,ry:sz,fill:shades[Math.min(4,Math.floor(i/3))],class:'floret'})) f.setAttribute(k,v);
+      g.appendChild(f);
+      f.style.animationDelay=(0.25+n*0.045)+'s';n++;
+    });
+  }
+  // the honey bee
+  const hold=document.createElementNS(NS,'g');hold.setAttribute('transform','translate(170 150) rotate(-18)');svg.appendChild(hold);
+  const bee=document.createElementNS(NS,'g');
+  bee.innerHTML='<ellipse cx="-4" cy="-10" rx="9" ry="6" fill="#fff" opacity=".8"/><ellipse cx="6" cy="-11" rx="8" ry="5" fill="#fff" opacity=".7"/><ellipse cx="0" cy="0" rx="14" ry="9" fill="#d9a441"/><path d="M-4 -8.5v17M3 -8.8v17.6" stroke="#2b2433" stroke-width="3"/><circle cx="14" cy="-1" r="5" fill="#2b2433"/>';
+  bee.setAttribute('class','floret');bee.style.animationDelay=(0.4+n*0.045)+'s';
+  hold.appendChild(bee);
+})();
+
+/* Signup: posts to Formspree once FORM_ENDPOINT is set; until then opens an email */
+const FORM_ENDPOINT='';
+document.querySelectorAll('[data-signup]').forEach(form=>{
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const note=form.nextElementSibling, email=form.email.value.trim();
+    if(!FORM_ENDPOINT){
+      location.href=`mailto:sophiarachelle7@gmail.com?subject=${encodeURIComponent('Add me to Honey Run Lavender updates')}&body=${encodeURIComponent('Please add '+email+' to the farm update list.')}`;
+      note.textContent='Your email app should open with the request ready to send.';
+      return;
+    }
+    try{
+      const res=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
+      if(!res.ok) throw 0;
+      form.reset();note.textContent='You\'re on the list. Thank you!';
+    }catch{note.textContent='That didn\'t go through. Check your connection and try again.';}
+  });
+});
+</script>
+</body>
+</html>
