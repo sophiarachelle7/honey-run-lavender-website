@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant survey · Honey Run Lavender</title>
+<meta name="description" content="Help a new organic farm in Butte Creek Canyon grow what Chico kitchens can't find locally.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Chefs: what can't you find locally?">
+<meta property="og:description" content="A 4-minute survey to help Honey Run Lavender grow what Chico kitchens are missing.">
+<meta property="og:image" content="https://honeyrunlavender.com/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--blush:#f6ece8;--sand:#ebdad2;--lavender:#6b4e8c;--ink:#3e3f42;--line:#dcc8bf;
+        --serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--blush);color:var(--ink);font:400 1.0625rem/1.6 var(--sans)}
+  a{color:var(--lavender)}
+  :focus-visible{outline:2px solid var(--lavender);outline-offset:3px}
+  .wrap{width:min(720px,100% - 3rem);margin-inline:auto}
+  .top{padding:1.5rem 0}
+  .top a{font-family:var(--serif);font-size:1.35rem;font-weight:600;text-decoration:none}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.05;color:var(--lavender);margin:1.5rem 0 1rem}
+  .intro{font-size:1.15rem;margin:0 0 2.5rem}
+  fieldset{border:0;margin:0;padding:1.75rem 0;border-top:1px solid var(--line)}
+  legend{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--lavender);padding:0;margin-bottom:.25rem}
+  .hint{font-size:.95rem;margin:0 0 1rem;color:#6a6268}
+  .q{margin:1.25rem 0 .5rem;font-weight:500;display:block}
+  input[type=text],input[type=email],input[type=url],select,textarea{width:100%;font:inherit;padding:.7rem .9rem;border:1px solid #cdb9b0;border-radius:10px;background:#fffaf8;color:var(--ink)}
+  textarea{min-height:110px;resize:vertical}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 1.25rem}
+  .choices{display:flex;flex-wrap:wrap;gap:.5rem}
+  .choices label{display:flex;align-items:center;gap:.45rem;padding:.5rem .85rem;border:1px solid #cdb9b0;border-radius:999px;background:#fffaf8;cursor:pointer;font-size:.98rem}
+  .choices input{accent-color:var(--lavender);margin:0}
+  .choices label:has(input:checked){border-color:var(--lavender);background:#efe6f5}
+  .stack label{display:flex;gap:.6rem;align-items:flex-start;margin:.45rem 0;cursor:pointer}
+  .stack input{accent-color:var(--lavender);margin-top:.35rem}
+  button{font:500 1.05rem var(--sans);padding:.9rem 1.8rem;border:0;border-radius:999px;background:var(--lavender);color:#fff;cursor:pointer;margin-top:1.5rem}
+  button:hover{background:#5a3f78}
+  button:disabled{opacity:.6;cursor:default}
+  .note{min-height:1.5em;margin:1rem 0 0}
+  .thanks{display:none;padding:3rem 0 5rem}
+  .thanks h2{font-family:var(--serif);font-weight:500;font-size:2.4rem;color:var(--lavender);margin:0 0 .5rem}
+  footer{padding:2.5rem 0 3rem;font-size:.92rem;border-top:1px solid var(--line);margin-top:3rem}
+  @media (max-width:600px){.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="/">Honey Run Lavender</a></div>
+
+  <main id="survey">
+    <h1>Chefs, what can't you find locally?</h1>
+    <p class="intro">I'm Sophia Somers, founder of Honey Run Lavender, a small organic farm planned for Butte Creek Canyon near the Honey Run Covered Bridge. Alongside the lavender, I'll be growing an organic garden starting in 2028. Chico already has great growers for the staples, so I don't want to grow what you can already get. I want to grow what you can't. This takes about 4 minutes.</p>
+
+    <form id="form">
+      <input type="hidden" name="_subject" value="Restaurant survey response">
+      <input type="hidden" name="form" value="Restaurant survey">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+      <fieldset>
+        <legend>About your kitchen</legend>
+        <div class="grid2">
+          <div><label class="q" for="name">Your name</label><input id="name" type="text" name="name" autocomplete="name" required></div>
+          <div><label class="q" for="role">Your role</label><select id="role" name="role"><option value="">Choose one</option><option>Owner</option><option>Executive chef</option><option>Chef de cuisine / sous chef</option><option>Purchasing / kitchen manager</option><option>Bar manager</option><option>Baker / pastry</option><option>Other</option></select></div>
+          <div><label class="q" for="business">Restaurant or business</label><input id="business" type="text" name="business" autocomplete="organization" required></div>
+          <div><label class="q" for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
+        </div>
+        <label class="q" for="type">What kind of place is it?</label>
+        <select id="type" name="business_type"><option value="">Choose one</option><option>Restaurant</option><option>Café / bakery</option><option>Bar / brewery / cocktail program</option><option>Caterer</option><option>Food truck</option><option>Grocery / co-op</option><option>Other</option></select>
+        <label class="q" for="cuisine">Cuisine or style</label>
+        <input id="cuisine" type="text" name="cuisine" placeholder="For example: seasonal Californian, Thai, wood-fired pizza">
+      </fieldset>
+
+      <fieldset>
+        <legend>How you source now</legend>
+        <span class="q" id="buy">How do you buy produce today?</span>
+        <div class="choices" role="group" aria-labelledby="buy"><label><input type="checkbox" name="buy_from" value="Direct from local farms"> Direct from local farms</label><label><input type="checkbox" name="buy_from" value="Farmers markets"> Farmers markets</label><label><input type="checkbox" name="buy_from" value="Broadline distributor"> Broadline distributor</label><label><input type="checkbox" name="buy_from" value="Specialty / produce distributor"> Specialty / produce distributor</label><label><input type="checkbox" name="buy_from" value="Grow some ourselves"> Grow some ourselves</label><label><input type="checkbox" name="buy_from" value="Grocery or cash-and-carry"> Grocery or cash-and-carry</label></div>
+        <label class="q" for="share">About how much of your produce is local?</label>
+        <select id="share" name="local_share"><option value="">Choose one</option><option>Very little</option><option>Up to a quarter</option><option>About half</option><option>Most of it</option><option>Nearly all of it</option></select>
+        <label class="q" for="plenty">What do you already have plenty of from local growers?</label>
+        <p class="hint">This tells me what not to grow.</p>
+        <textarea id="plenty" name="already_well_supplied" placeholder="For example: tomatoes, lettuce, stone fruit, eggs"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>The gaps</legend>
+        <label class="q" for="hard">What do you wish you could buy locally but can't, or can't get reliably?</label>
+        <p class="hint">The most useful question on this page. Name specific varieties if you can.</p>
+        <textarea id="hard" name="hard_to_source" required></textarea>
+        <span class="q" id="want">Which of these would you buy from a small organic grower?</span>
+        <div class="choices" role="group" aria-labelledby="want"><label><input type="checkbox" name="want" value="Microgreens"> Microgreens</label><label><input type="checkbox" name="want" value="Edible flowers"> Edible flowers</label><label><input type="checkbox" name="want" value="Squash blossoms"> Squash blossoms</label><label><input type="checkbox" name="want" value="Specialty herbs (shiso, chervil, lovage, sorrel)"> Specialty herbs (shiso, chervil, lovage, sorrel)</label><label><input type="checkbox" name="want" value="Asian greens (mizuna, tatsoi, shungiku)"> Asian greens (mizuna, tatsoi, shungiku)</label><label><input type="checkbox" name="want" value="Chicories and bitter greens"> Chicories and bitter greens</label><label><input type="checkbox" name="want" value="Specialty peppers"> Specialty peppers</label><label><input type="checkbox" name="want" value="Tomatillos and ground cherries"> Tomatillos and ground cherries</label><label><input type="checkbox" name="want" value="Heirloom or specialty radishes"> Heirloom or specialty radishes</label><label><input type="checkbox" name="want" value="Baby root vegetables"> Baby root vegetables</label><label><input type="checkbox" name="want" value="Fennel, fennel fronds or pollen"> Fennel, fennel fronds or pollen</label><label><input type="checkbox" name="want" value="Specialty alliums (shallots, scapes, green garlic)"> Specialty alliums (shallots, scapes, green garlic)</label><label><input type="checkbox" name="want" value="Unusual berries"> Unusual berries</label><label><input type="checkbox" name="want" value="Culinary lavender"> Culinary lavender</label><label><input type="checkbox" name="want" value="Lavender honey or syrup"> Lavender honey or syrup</label><label><input type="checkbox" name="want" value="Raw honey"> Raw honey</label><label><input type="checkbox" name="want" value="Fresh-cut flowers for tables"> Fresh-cut flowers for tables</label></div>
+        <span class="q" id="months">In which months is good local produce hardest to find?</span>
+        <div class="choices" role="group" aria-labelledby="months"><label><input type="checkbox" name="short_months" value="Jan"> Jan</label><label><input type="checkbox" name="short_months" value="Feb"> Feb</label><label><input type="checkbox" name="short_months" value="Mar"> Mar</label><label><input type="checkbox" name="short_months" value="Apr"> Apr</label><label><input type="checkbox" name="short_months" value="May"> May</label><label><input type="checkbox" name="short_months" value="Jun"> Jun</label><label><input type="checkbox" name="short_months" value="Jul"> Jul</label><label><input type="checkbox" name="short_months" value="Aug"> Aug</label><label><input type="checkbox" name="short_months" value="Sep"> Sep</label><label><input type="checkbox" name="short_months" value="Oct"> Oct</label><label><input type="checkbox" name="short_months" value="Nov"> Nov</label><label><input type="checkbox" name="short_months" value="Dec"> Dec</label></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>How buying would work</legend>
+        <label class="q" for="qty">For your top item, about how much would you buy?</label>
+        <input id="qty" type="text" name="typical_quantity" placeholder="For example: 2 lbs microgreens a week, 50 blossoms on Fridays">
+        <span class="q" id="freq">How often would you want deliveries?</span>
+        <div class="stack" role="radiogroup" aria-labelledby="freq"><label><input type="radio" name="delivery_frequency" value="Twice a week or more"> Twice a week or more</label><label><input type="radio" name="delivery_frequency" value="Weekly"> Weekly</label><label><input type="radio" name="delivery_frequency" value="Every other week"> Every other week</label><label><input type="radio" name="delivery_frequency" value="Seasonal or as available"> Seasonal or as available</label></div>
+        <span class="q" id="order">How would you like to order?</span>
+        <div class="choices" role="group" aria-labelledby="order"><label><input type="checkbox" name="ordering" value="Weekly availability list by email"> Weekly availability list by email</label><label><input type="checkbox" name="ordering" value="Text message"> Text message</label><label><input type="checkbox" name="ordering" value="Standing order"> Standing order</label><label><input type="checkbox" name="ordering" value="Online order form"> Online order form</label><label><input type="checkbox" name="ordering" value="Pick up at a farmers market"> Pick up at a farmers market</label></div>
+        <label class="q" for="premium">Compared with distributor prices, what would you pay for organic produce grown in the canyon and picked that week?</label>
+        <select id="premium" name="price_vs_distributor"><option value="">Choose one</option><option>Same price</option><option>Up to 10% more</option><option>10–25% more</option><option>25–50% more</option><option>More, for the right item</option></select>
+        <label class="q" for="cert">Does the produce need to be certified organic?</label>
+        <select id="cert" name="organic_certification"><option value="">Choose one</option><option>Yes, certified organic</option><option>Organic practices are enough</option><option>Doesn't matter to us</option></select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Working together</legend>
+        <span class="q" id="collab">What else interests you?</span>
+        <div class="choices" role="group" aria-labelledby="collab"><label><input type="checkbox" name="interests" value="Naming the farm on our menu"> Naming the farm on our menu</label><label><input type="checkbox" name="interests" value="Grow-to-order for a dish"> Grow-to-order for a dish</label><label><input type="checkbox" name="interests" value="Lavender for food or cocktails"> Lavender for food or cocktails</label><label><input type="checkbox" name="interests" value="Farm dinners or chef events"> Farm dinners or chef events</label><label><input type="checkbox" name="interests" value="Visiting the farm"> Visiting the farm</label><label><input type="checkbox" name="interests" value="Pairing with Honey Run photo sessions or events"> Pairing with Honey Run photo sessions or events</label></div>
+        <label class="q" for="comments">Anything else? Varieties you love, growers you trust, what makes a supplier easy to work with.</label>
+        <textarea id="comments" name="comments"></textarea>
+        <div class="stack">
+          <label><input type="checkbox" name="send_availability" value="Yes"> Send me the farm's availability list when the garden starts in 2028</label>
+          <label><input type="checkbox" name="talk_to_grower" value="Yes"> I'm open to a short call about planning crops for my kitchen</label>
+        </div>
+      </fieldset>
+
+      <button type="submit">Send my answers</button>
+      <p class="note" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <section class="thanks" id="thanks" aria-live="polite">
+    <h2>Thank you</h2>
+    <p>Your answers decide what goes in the ground. If you asked for the availability list or a call, you'll hear from info@honeyrunlavender.com.</p>
+    <p><a href="/">Back to Honey Run Lavender</a></p>
+  </section>
+
+  <footer>Questions? <a href="mailto:info@honeyrunlavender.com">info@honeyrunlavender.com</a></footer>
+</div>
+
+<script>
+const ENDPOINT='https://formspree.io/f/xvkknzdz';
+const form=document.getElementById('form'), note=form.querySelector('.note'), btn=form.querySelector('button');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  btn.disabled=true; note.textContent='Sending…';
+  // Join multi-select answers into one readable line each
+  const data=new FormData(), seen={};
+  for(const [k,v] of new FormData(form)) (seen[k]=seen[k]||[]).push(v);
+  for(const k in seen) data.append(k, seen[k].join(', '));
+  try{
+    const res=await fetch(ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:data});
+    if(!res.ok) throw 0;
+    document.getElementById('survey').style.display='none';
+    document.getElementById('thanks').style.display='block';
+    window.scrollTo(0,0);
+  }catch{
+    btn.disabled=false;
+    note.textContent='Your answers didn\'t send. Check your connection and press Send again.';
+  }
+});
+</script>
+</body>
+</html>
