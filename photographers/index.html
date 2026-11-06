@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photographer survey · Honey Run Lavender</title>
+<meta name="description" content="Help shape photo sessions at Honey Run Lavender, a lavender farm opening in Butte Creek Canyon, Chico.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Photographers: help shape Honey Run Lavender">
+<meta property="og:description" content="A 3-minute survey on when and how you'd book photo sessions at Chico's first lavender farm.">
+<meta property="og:image" content="https://honeyrunlavender.com/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--blush:#f6ece8;--sand:#ebdad2;--lavender:#6b4e8c;--ink:#3e3f42;--line:#dcc8bf;
+        --serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--blush);color:var(--ink);font:400 1.0625rem/1.6 var(--sans)}
+  a{color:var(--lavender)}
+  :focus-visible{outline:2px solid var(--lavender);outline-offset:3px}
+  .wrap{width:min(720px,100% - 3rem);margin-inline:auto}
+  .top{padding:1.5rem 0}
+  .top a{font-family:var(--serif);font-size:1.35rem;font-weight:600;text-decoration:none}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.05;color:var(--lavender);margin:1.5rem 0 1rem}
+  .intro{font-size:1.15rem;margin:0 0 2.5rem}
+  fieldset{border:0;margin:0;padding:1.75rem 0;border-top:1px solid var(--line)}
+  legend{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--lavender);padding:0;margin-bottom:.25rem}
+  .hint{font-size:.95rem;margin:0 0 1rem;color:#6a6268}
+  .q{margin:1.25rem 0 .5rem;font-weight:500;display:block}
+  input[type=text],input[type=email],input[type=url],select,textarea{width:100%;font:inherit;padding:.7rem .9rem;border:1px solid #cdb9b0;border-radius:10px;background:#fffaf8;color:var(--ink)}
+  textarea{min-height:110px;resize:vertical}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 1.25rem}
+  .choices{display:flex;flex-wrap:wrap;gap:.5rem}
+  .choices label{display:flex;align-items:center;gap:.45rem;padding:.5rem .85rem;border:1px solid #cdb9b0;border-radius:999px;background:#fffaf8;cursor:pointer;font-size:.98rem}
+  .choices input{accent-color:var(--lavender);margin:0}
+  .choices label:has(input:checked){border-color:var(--lavender);background:#efe6f5}
+  .stack label{display:flex;gap:.6rem;align-items:flex-start;margin:.45rem 0;cursor:pointer}
+  .stack input{accent-color:var(--lavender);margin-top:.35rem}
+  button{font:500 1.05rem var(--sans);padding:.9rem 1.8rem;border:0;border-radius:999px;background:var(--lavender);color:#fff;cursor:pointer;margin-top:1.5rem}
+  button:hover{background:#5a3f78}
+  button:disabled{opacity:.6;cursor:default}
+  .note{min-height:1.5em;margin:1rem 0 0}
+  .thanks{display:none;padding:3rem 0 5rem}
+  .thanks h2{font-family:var(--serif);font-weight:500;font-size:2.4rem;color:var(--lavender);margin:0 0 .5rem}
+  footer{padding:2.5rem 0 3rem;font-size:.92rem;border-top:1px solid var(--line);margin-top:3rem}
+  @media (max-width:600px){.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="/">Honey Run Lavender</a></div>
+
+  <main id="survey">
+    <h1>Photographers, help shape the farm</h1>
+    <p class="intro">Honey Run Lavender is a lavender farm planned for a hillside in Butte Creek Canyon, near the Honey Run Covered Bridge, with lavender terraced down the slope. It opens for photo sessions in 2030. Before then, I'd like to know when you'd shoot here, what you'd need, and what feels like a fair price. It takes about 3 minutes.</p>
+
+    <form id="form">
+      <input type="hidden" name="_subject" value="Photographer survey response">
+      <input type="hidden" name="form" value="Photographer survey">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+      <fieldset>
+        <legend>About you</legend>
+        <div class="grid2">
+          <div><label class="q" for="name">Your name</label><input id="name" type="text" name="name" autocomplete="name" required></div>
+          <div><label class="q" for="business">Business name</label><input id="business" type="text" name="business" autocomplete="organization"></div>
+          <div><label class="q" for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
+          <div><label class="q" for="link">Website or Instagram</label><input id="link" type="text" name="website_or_instagram"></div>
+        </div>
+        <label class="q" for="based">Where are you based?</label>
+        <select id="based" name="based_in">
+          <option value="">Choose one</option>
+          <option>Chico</option><option>Elsewhere in Butte County</option><option>Redding / Shasta County</option>
+          <option>Sacramento area</option><option>Bay Area</option><option>Other</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your sessions</legend>
+        <span class="q" id="types">What kinds of sessions would you book here?</span>
+        <div class="choices" role="group" aria-labelledby="types">
+          <label><input type="checkbox" name="session_types" value="Graduation"> Graduation</label>
+          <label><input type="checkbox" name="session_types" value="Family"> Family</label>
+          <label><input type="checkbox" name="session_types" value="Engagement / couples"> Engagement / couples</label>
+          <label><input type="checkbox" name="session_types" value="Maternity / newborn"> Maternity / newborn</label>
+          <label><input type="checkbox" name="session_types" value="High school senior"> High school senior</label>
+          <label><input type="checkbox" name="session_types" value="Portraits / headshots"> Portraits / headshots</label>
+          <label><input type="checkbox" name="session_types" value="Branding / product"> Branding / product</label>
+          <label><input type="checkbox" name="session_types" value="Elopement / small wedding"> Elopement / small wedding</label>
+        </div>
+
+        <span class="q" id="likely">How likely are you to book a session at a lavender farm in Chico?</span>
+        <div class="stack" role="radiogroup" aria-labelledby="likely">
+          <label><input type="radio" name="likelihood" value="Very likely" required> Very likely</label>
+          <label><input type="radio" name="likelihood" value="Somewhat likely"> Somewhat likely</label>
+          <label><input type="radio" name="likelihood" value="Only if a client asks"> Only if a client asks for it</label>
+          <label><input type="radio" name="likelihood" value="Unlikely"> Unlikely</label>
+        </div>
+
+        <label class="q" for="volume">About how many sessions a year might you book here?</label>
+        <select id="volume" name="sessions_per_year">
+          <option value="">Choose one</option>
+          <option>1–2</option><option>3–5</option><option>6–10</option><option>11–20</option><option>More than 20</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>When you'd shoot</legend>
+        <p class="hint">Lavender here should bloom from late May into July. The terraces, oaks and canyon views are there all year.</p>
+        <span class="q" id="seasons">Which times of year would you book?</span>
+        <div class="choices" role="group" aria-labelledby="seasons">
+          <label><input type="checkbox" name="seasons" value="Spring (Mar–mid May)"> Spring, Mar–mid May</label>
+          <label><input type="checkbox" name="seasons" value="Lavender bloom (late May–July)"> Lavender bloom, late May–July</label>
+          <label><input type="checkbox" name="seasons" value="Late summer (Aug–Sept)"> Late summer, Aug–Sept</label>
+          <label><input type="checkbox" name="seasons" value="Fall (Oct–Nov)"> Fall, Oct–Nov</label>
+          <label><input type="checkbox" name="seasons" value="Winter (Dec–Feb)"> Winter, Dec–Feb</label>
+        </div>
+
+        <span class="q" id="tod">What times and days work best?</span>
+        <div class="choices" role="group" aria-labelledby="tod">
+          <label><input type="checkbox" name="time_of_day" value="Sunrise"> Sunrise</label>
+          <label><input type="checkbox" name="time_of_day" value="Morning"> Morning</label>
+          <label><input type="checkbox" name="time_of_day" value="Midday"> Midday</label>
+          <label><input type="checkbox" name="time_of_day" value="Golden hour / sunset"> Golden hour / sunset</label>
+          <label><input type="checkbox" name="time_of_day" value="Weekdays"> Weekdays</label>
+          <label><input type="checkbox" name="time_of_day" value="Weekends"> Weekends</label>
+        </div>
+
+        <label class="q" for="length">How long is a typical session?</label>
+        <select id="length" name="session_length">
+          <option value="">Choose one</option>
+          <option>30 minutes</option><option>1 hour</option><option>1.5–2 hours</option><option>Half day</option><option>It varies a lot</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pricing</legend>
+        <span class="q" id="model">How would you prefer to pay for access?</span>
+        <div class="stack" role="radiogroup" aria-labelledby="model">
+          <label><input type="radio" name="pricing_model" value="Flat fee per session"> A flat fee per session</label>
+          <label><input type="radio" name="pricing_model" value="Hourly rate"> An hourly rate</label>
+          <label><input type="radio" name="pricing_model" value="Season pass"> A season pass for unlimited bloom-season sessions</label>
+          <label><input type="radio" name="pricing_model" value="Client pays farm directly"> My client pays the farm directly</label>
+        </div>
+
+        <label class="q" for="price">For a 1-hour session during bloom, what access fee feels fair?</label>
+        <select id="price" name="fair_price_1hr_bloom">
+          <option value="">Choose one</option>
+          <option>Under $50</option><option>$50–$75</option><option>$75–$100</option><option>$100–$150</option><option>$150–$250</option><option>More than $250</option>
+        </select>
+
+        <label class="q" for="pass">Would you consider a season pass? If so, what's a fair price?</label>
+        <select id="pass" name="season_pass_price">
+          <option value="">Choose one</option>
+          <option>Not interested</option><option>Under $250</option><option>$250–$400</option><option>$400–$600</option><option>More than $600</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>What would make it work</legend>
+        <span class="q" id="needs">What matters most to you on site?</span>
+        <div class="choices" role="group" aria-labelledby="needs">
+          <label><input type="checkbox" name="needs" value="Easy parking"> Easy parking</label>
+          <label><input type="checkbox" name="needs" value="Restroom"> Restroom</label>
+          <label><input type="checkbox" name="needs" value="Changing area"> Changing area</label>
+          <label><input type="checkbox" name="needs" value="Shade / covered spot"> Shade or a covered spot</label>
+          <label><input type="checkbox" name="needs" value="Props (baskets, blankets, chairs)"> Props like baskets or blankets</label>
+          <label><input type="checkbox" name="needs" value="Private time slots"> Private time slots</label>
+          <label><input type="checkbox" name="needs" value="Online booking"> Online booking</label>
+          <label><input type="checkbox" name="needs" value="Bloom-status updates"> Bloom-status updates</label>
+        </div>
+
+        <label class="q" for="comments">Anything else I should know? Other farms you've shot at, what worked, what didn't.</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <div class="stack">
+          <label><input type="checkbox" name="updates" value="Yes"> Email me when photo bookings open</label>
+          <label><input type="checkbox" name="founding_list" value="Yes"> I'd like to be considered for a founding photographer spot or a preview shoot</label>
+        </div>
+      </fieldset>
+
+      <button type="submit">Send my answers</button>
+      <p class="note" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <section class="thanks" id="thanks" aria-live="polite">
+    <h2>Thank you</h2>
+    <p>Your answers help plan the photo sessions at Honey Run Lavender. If you asked to hear when bookings open, you'll get an email from info@honeyrunlavender.com.</p>
+    <p><a href="/">Back to Honey Run Lavender</a></p>
+  </section>
+
+  <footer>Questions? <a href="mailto:info@honeyrunlavender.com">info@honeyrunlavender.com</a></footer>
+</div>
+
+<script>
+const ENDPOINT='https://formspree.io/f/xvkknzdz';
+const form=document.getElementById('form'), note=form.querySelector('.note'), btn=form.querySelector('button');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  btn.disabled=true; note.textContent='Sending…';
+  // Join multi-select answers into one readable line each
+  const data=new FormData(), seen={};
+  for(const [k,v] of new FormData(form)) (seen[k]=seen[k]||[]).push(v);
+  for(const k in seen) data.append(k, seen[k].join(', '));
+  try{
+    const res=await fetch(ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:data});
+    if(!res.ok) throw 0;
+    document.getElementById('survey').style.display='none';
+    document.getElementById('thanks').style.display='block';
+    window.scrollTo(0,0);
+  }catch{
+    btn.disabled=false;
+    note.textContent='Your answers didn\'t send. Check your connection and press Send again.';
+  }
+});
+</script>
+</body>
+</html>
