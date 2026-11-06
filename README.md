@@ -6,7 +6,7 @@ Coming-soon site for honeyrunlavender.com. Plain HTML, no build step.
 
 ## Email signups
 The page has `const FORM_ENDPOINT='';` near the bottom. Until it's set, the signup
-button opens a pre-filled email to sophiarachelle7@gmail.com. To collect signups
+button opens a pre-filled email to info@honeyrunlavender.com. To collect signups
 automatically, create a free form at formspree.io and paste its URL
 (e.g. `https://formspree.io/f/abcd1234`) into `FORM_ENDPOINT`.
 

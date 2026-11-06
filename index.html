@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Honey Run Lavender · Chico, California</title>
 <meta name="description" content="Honey Run Lavender is an organic, permaculture-based lavender farm taking root in Butte Creek Canyon, Chico. Opening for U-pick, photos and small events in 2030.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://honeyrunlavender.com/">
+<meta property="og:title" content="Honey Run Lavender">
+<meta property="og:description" content="An organic lavender farm taking root in Butte Creek Canyon, Chico. Opening to visitors in 2030.">
+<meta property="og:image" content="https://honeyrunlavender.com/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f6ece8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
@@ -169,7 +180,7 @@
 <footer>
   <div class="wrap">
     <span>Honey Run Lavender · Butte Creek Canyon, Chico, California</span>
-    <a href="mailto:sophiarachelle7@gmail.com">sophiarachelle7@gmail.com</a>
+    <a href="mailto:info@honeyrunlavender.com">info@honeyrunlavender.com</a>
   </div>
 </footer>
 
@@ -227,7 +238,7 @@ document.querySelectorAll('[data-signup]').forEach(form=>{
     e.preventDefault();
     const note=form.nextElementSibling, email=form.email.value.trim();
     if(!FORM_ENDPOINT){
-      location.href=`mailto:sophiarachelle7@gmail.com?subject=${encodeURIComponent('Add me to Honey Run Lavender updates')}&body=${encodeURIComponent('Please add '+email+' to the farm update list.')}`;
+      location.href=`mailto:info@honeyrunlavender.com?subject=${encodeURIComponent('Add me to Honey Run Lavender updates')}&body=${encodeURIComponent('Please add '+email+' to the farm update list.')}`;
       note.textContent='Your email app should open with the request ready to send.';
       return;
     }
