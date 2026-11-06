@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>June Bloom Day · Honey Run Lavender</title>
+<meta name="description" content="Would you come to a free June Bloom Day at a lavender farm in Butte Creek Canyon? Take a 2-minute survey.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Would you come to a free June Bloom Day?">
+<meta property="og:description" content="Lavender lemonade, iced lavender matcha, lavender ice cream and u-pick bouquets in Butte Creek Canyon. Take a 2-minute survey.">
+<meta property="og:image" content="https://honeyrunlavender.com/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--blush:#f6ece8;--sand:#ebdad2;--lavender:#6b4e8c;--ink:#3e3f42;--line:#dcc8bf;
+        --serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--blush);color:var(--ink);font:400 1.0625rem/1.6 var(--sans)}
+  a{color:var(--lavender)}
+  :focus-visible{outline:2px solid var(--lavender);outline-offset:3px}
+  .wrap{width:min(720px,100% - 3rem);margin-inline:auto}
+  .top{padding:1.5rem 0}
+  .top a{font-family:var(--serif);font-size:1.35rem;font-weight:600;text-decoration:none}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.05;color:var(--lavender);margin:1.5rem 0 1rem}
+  .intro{font-size:1.15rem;margin:0 0 2.5rem}
+  fieldset{border:0;margin:0;padding:1.75rem 0;border-top:1px solid var(--line)}
+  legend{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--lavender);padding:0;margin-bottom:.25rem}
+  .hint{font-size:.95rem;margin:0 0 1rem;color:#6a6268}
+  .q{margin:1.25rem 0 .5rem;font-weight:500;display:block}
+  input[type=text],input[type=email],input[type=url],select,textarea{width:100%;font:inherit;padding:.7rem .9rem;border:1px solid #cdb9b0;border-radius:10px;background:#fffaf8;color:var(--ink)}
+  textarea{min-height:110px;resize:vertical}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 1.25rem}
+  .choices{display:flex;flex-wrap:wrap;gap:.5rem}
+  .choices label{display:flex;align-items:center;gap:.45rem;padding:.5rem .85rem;border:1px solid #cdb9b0;border-radius:999px;background:#fffaf8;cursor:pointer;font-size:.98rem}
+  .choices input{accent-color:var(--lavender);margin:0}
+  .choices label:has(input:checked){border-color:var(--lavender);background:#efe6f5}
+  .stack label{display:flex;gap:.6rem;align-items:flex-start;margin:.45rem 0;cursor:pointer}
+  .stack input{accent-color:var(--lavender);margin-top:.35rem}
+  button{font:500 1.05rem var(--sans);padding:.9rem 1.8rem;border:0;border-radius:999px;background:var(--lavender);color:#fff;cursor:pointer;margin-top:1.5rem}
+  button:hover{background:#5a3f78}
+  button:disabled{opacity:.6;cursor:default}
+  .note{min-height:1.5em;margin:1rem 0 0}
+  .thanks{display:none;padding:3rem 0 5rem}
+  .thanks h2{font-family:var(--serif);font-weight:500;font-size:2.4rem;color:var(--lavender);margin:0 0 .5rem}
+  footer{padding:2.5rem 0 3rem;font-size:.92rem;border-top:1px solid var(--line);margin-top:3rem}
+  @media (max-width:600px){.grid2{grid-template-columns:1fr}}
+  .drive{background:#efe2dc;border-radius:12px;padding:1rem 1.25rem;margin:0 0 1rem}
+  .menu{display:grid;grid-template-columns:1fr 1fr;gap:.75rem 1.5rem;margin:.5rem 0 2.25rem;padding:0;list-style:none}
+  .menu li{border-left:3px solid #a993c4;padding-left:.75rem}
+  .menu strong{display:block;font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--lavender)}
+  @media (max-width:600px){.menu{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="/">Honey Run Lavender</a></div>
+
+  <main id="survey">
+    <h1>Would you come to a free June Bloom Day?</h1>
+    <p class="intro">Honey Run Lavender is a lavender farm planned for Butte Creek Canyon, with lavender terraced down the hillside. Once the fields are in bloom, I'd like to open the farm for a free June Bloom Day: wander the rows, take photos and enjoy the canyon. I'd love to know if you'd come. It takes about 2 minutes.</p>
+
+    <p class="q" style="margin-top:0">What would be for sale</p>
+    <ul class="menu">
+      <li><strong>Lavender lemonade</strong>Fresh lemonade with farm lavender</li>
+      <li><strong>Iced lavender matcha</strong>Matcha with lavender syrup</li>
+      <li><strong>Lavender ice cream</strong>A scoop or a cone</li>
+      <li><strong>U-pick bouquet</strong>Cut your own bundle of sprigs</li>
+    </ul>
+
+    <form id="form">
+      <input type="hidden" name="_subject" value="Bloom Day survey response">
+      <input type="hidden" name="form" value="June Bloom Day survey">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+      <fieldset>
+        <legend>The event</legend>
+        <span class="q" id="come">Does a free June Bloom Day sound like something you'd come to?</span>
+        <div class="stack" role="radiogroup" aria-labelledby="come"><label><input type="radio" name="would_attend" value="Yes, definitely" required> Yes, definitely</label><label><input type="radio" name="would_attend" value="Probably"> Probably</label><label><input type="radio" name="would_attend" value="Maybe, depending on the date"> Maybe, depending on the date</label><label><input type="radio" name="would_attend" value="Probably not"> Probably not</label></div>
+        <span class="q" id="when">When would you most likely come?</span>
+        <div class="choices" role="group" aria-labelledby="when"><label><input type="checkbox" name="best_times" value="Saturday morning"> Saturday morning</label><label><input type="checkbox" name="best_times" value="Saturday afternoon"> Saturday afternoon</label><label><input type="checkbox" name="best_times" value="Sunday"> Sunday</label><label><input type="checkbox" name="best_times" value="Weekday evening"> Weekday evening</label><label><input type="checkbox" name="best_times" value="Sunset hours"> Sunset hours</label></div>
+        <span class="q" id="who">Who would you bring?</span>
+        <div class="choices" role="group" aria-labelledby="who"><label><input type="checkbox" name="coming_with" value="Just me"> Just me</label><label><input type="checkbox" name="coming_with" value="Partner"> Partner</label><label><input type="checkbox" name="coming_with" value="Kids"> Kids</label><label><input type="checkbox" name="coming_with" value="Friends"> Friends</label><label><input type="checkbox" name="coming_with" value="Parents or grandparents"> Parents or grandparents</label><label><input type="checkbox" name="coming_with" value="A dog (on leash)"> A dog (on leash)</label></div>
+        <label class="q" for="size">How many people in your group, including you?</label>
+        <select id="size" name="group_size"><option value="">Choose one</option><option>1</option><option>2</option><option>3–4</option><option>5–6</option><option>7 or more</option></select>
+        <span class="q" id="ticket">To keep it from getting crowded, would you reserve a free timed ticket online?</span>
+        <div class="stack" role="radiogroup" aria-labelledby="ticket"><label><input type="radio" name="free_timed_ticket" value="Yes, that's fine"> Yes, that's fine</label><label><input type="radio" name="free_timed_ticket" value="Only if it's quick"> Only if it's quick</label><label><input type="radio" name="free_timed_ticket" value="I'd rather just show up"> I'd rather just show up</label></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>The drive</legend>
+        <div class="drive">The farm is about <strong>20–25 minutes from downtown Chico</strong>, about <strong>5 minutes from the Honey Run Covered Bridge</strong>, up Skyway and along Honey Run Road.</div>
+        <span class="q" id="drive">Would you make that drive for the event?</span>
+        <div class="stack" role="radiogroup" aria-labelledby="drive"><label><input type="radio" name="would_drive" value="Yes, easily" required> Yes, easily</label><label><input type="radio" name="would_drive" value="Yes, for an event like this"> Yes, for an event like this</label><label><input type="radio" name="would_drive" value="Only if it's on my way"> Only if it's on my way</label><label><input type="radio" name="would_drive" value="Probably not"> Probably not</label></div>
+        <label class="q" for="from">Where would you be coming from?</label>
+        <select id="from" name="coming_from"><option value="">Choose one</option><option>Chico</option><option>Paradise, Magalia or the Ridge</option><option>Durham</option><option>Oroville</option><option>Elsewhere in Butte County</option><option>Redding area</option><option>Sacramento area</option><option>Other</option></select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Lavender treats</legend>
+        <span class="q" id="treats">Which would you buy? Pick all that apply.</span>
+        <div class="choices" role="group" aria-labelledby="treats"><label><input type="checkbox" name="would_buy" value="Lavender lemonade"> Lavender lemonade</label><label><input type="checkbox" name="would_buy" value="Iced lavender matcha"> Iced lavender matcha</label><label><input type="checkbox" name="would_buy" value="Lavender ice cream"> Lavender ice cream</label><label><input type="checkbox" name="would_buy" value="U-pick lavender bouquet"> U-pick lavender bouquet</label></div>
+        <span class="q" id="fav">Which are you most excited about?</span>
+        <div class="stack" role="radiogroup" aria-labelledby="fav"><label><input type="radio" name="most_excited" value="Lavender lemonade"> Lavender lemonade</label><label><input type="radio" name="most_excited" value="Iced lavender matcha"> Iced lavender matcha</label><label><input type="radio" name="most_excited" value="Lavender ice cream"> Lavender ice cream</label><label><input type="radio" name="most_excited" value="U-pick lavender bouquet"> U-pick lavender bouquet</label><label><input type="radio" name="most_excited" value="None of these"> None of these</label></div>
+        <label class="q" for="drinkprice">What would you expect to pay for a lavender drink?</label>
+        <select id="drinkprice" name="drink_price"><option value="">Choose one</option><option>$4–$5</option><option>$6–$7</option><option>$8–$9</option><option>$10 or more</option></select>
+        <label class="q" for="icprice">For a scoop of lavender ice cream?</label>
+        <select id="icprice" name="ice_cream_price"><option value="">Choose one</option><option>$4–$5</option><option>$6–$7</option><option>$8 or more</option></select>
+        <label class="q" for="upick">For a u-pick lavender bouquet?</label>
+        <select id="upick" name="upick_price"><option value="">Choose one</option><option>$10</option><option>$15</option><option>$20</option><option>$25</option><option>$30 or more</option></select>
+        <span class="q" id="more">What else would you enjoy at Bloom Day?</span>
+        <div class="choices" role="group" aria-labelledby="more"><label><input type="checkbox" name="also_interested" value="Lavender honey"> Lavender honey</label><label><input type="checkbox" name="also_interested" value="Soaps and candles"> Soaps and candles</label><label><input type="checkbox" name="also_interested" value="Dried lavender bundles"> Dried lavender bundles</label><label><input type="checkbox" name="also_interested" value="Photo spots"> Photo spots</label><label><input type="checkbox" name="also_interested" value="Live music"> Live music</label><label><input type="checkbox" name="also_interested" value="Picnic area"> Picnic area</label><label><input type="checkbox" name="also_interested" value="Short workshops"> Short workshops</label><label><input type="checkbox" name="also_interested" value="Bee and garden tour"> Bee and garden tour</label><label><input type="checkbox" name="also_interested" value="A local food truck"> A local food truck</label></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Stay in touch</legend>
+        <p class="hint">Optional. Leave your email if you'd like an invite.</p>
+        <div class="grid2">
+          <div><label class="q" for="name">Name</label><input id="name" type="text" name="name" autocomplete="name"></div>
+          <div><label class="q" for="email">Email</label><input id="email" type="email" name="email" autocomplete="email"></div>
+        </div>
+        <label class="q" for="comments">Anything else you'd love to see?</label>
+        <textarea id="comments" name="comments"></textarea>
+        <div class="stack">
+          <label><input type="checkbox" name="invite_me" value="Yes"> Invite me to the first June Bloom Day</label>
+          <label><input type="checkbox" name="farm_updates" value="Yes"> Send me occasional farm updates</label>
+        </div>
+      </fieldset>
+
+      <button type="submit">Send my answers</button>
+      <p class="note" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <section class="thanks" id="thanks" aria-live="polite">
+    <h2>Thank you</h2>
+    <p>Your answers help plan the first June Bloom Day. If you asked for an invite, it will come from info@honeyrunlavender.com.</p>
+    <p><a href="/">Back to Honey Run Lavender</a></p>
+  </section>
+
+  <footer>Questions? <a href="mailto:info@honeyrunlavender.com">info@honeyrunlavender.com</a></footer>
+</div>
+
+<script>
+const ENDPOINT='https://formspree.io/f/xvkknzdz';
+const form=document.getElementById('form'), note=form.querySelector('.note'), btn=form.querySelector('button');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  btn.disabled=true; note.textContent='Sending…';
+  // Join multi-select answers into one readable line each
+  const data=new FormData(), seen={};
+  for(const [k,v] of new FormData(form)) (seen[k]=seen[k]||[]).push(v);
+  for(const k in seen) data.append(k, seen[k].join(', '));
+  try{
+    const res=await fetch(ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:data});
+    if(!res.ok) throw 0;
+    document.getElementById('survey').style.display='none';
+    document.getElementById('thanks').style.display='block';
+    window.scrollTo(0,0);
+  }catch{
+    btn.disabled=false;
+    note.textContent='Your answers didn\'t send. Check your connection and press Send again.';
+  }
+});
+</script>
+</body>
+</html>
