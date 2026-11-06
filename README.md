@@ -2,11 +2,10 @@
 
 Coming-soon site for honeyrunlavender.com. Plain HTML, no build step.
 
-- `deck/` – Version A, styled to match the pitch deck
-- `fresh/` – Version B, a new look
+- `index.html` – the whole site (styled to match the pitch deck)
 
 ## Email signups
-Each page has `const FORM_ENDPOINT='';` near the bottom. Until it's set, the signup
+The page has `const FORM_ENDPOINT='';` near the bottom. Until it's set, the signup
 button opens a pre-filled email to sophiarachelle7@gmail.com. To collect signups
 automatically, create a free form at formspree.io and paste its URL
 (e.g. `https://formspree.io/f/abcd1234`) into `FORM_ENDPOINT`.
