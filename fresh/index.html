@@ -37,7 +37,7 @@
   .hero-art{align-self:stretch;display:flex;justify-content:center}
   .hero-art svg{height:min(560px,70vh);width:auto;overflow:visible}
 
-  .signup{display:flex;max-width:470px;background:#fff;border-radius:14px;padding:.35rem;box-shadow:0 0 0 1px #d6cde3}
+  .signup{display:flex;width:100%;max-width:470px;background:#fff;border-radius:14px;padding:.35rem;box-shadow:0 0 0 1px #d6cde3}
   .signup label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .signup input{flex:1;min-width:0;font:inherit;border:0;background:transparent;padding:.75rem .9rem;color:var(--ink)}
   .signup input:focus-visible{outline:none}
@@ -169,7 +169,7 @@
       </div>
       <div class="where">
         <p>We'll write when the first starts sprout, on planting day, and when there's a date to visit. Nothing more.</p>
-        <div style="flex:1 1 320px;max-width:470px">
+        <div style="flex:1 1 320px;max-width:470px;min-width:0">
           <form class="signup" data-signup>
             <label for="email-foot">Email address</label>
             <input id="email-foot" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
