@@ -7,6 +7,10 @@
 <meta name="description" content="Honey Run Lavender is an organic, permaculture-based lavender farm taking root in Butte Creek Canyon, Chico. Opening for U-pick, photos and small events in 2030.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://honeyrunlavender.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Honey Run Lavender","url":"https://honeyrunlavender.com/","logo":"https://honeyrunlavender.com/apple-touch-icon.png","image":"https://honeyrunlavender.com/share.png","email":"info@honeyrunlavender.com","description":"An organic, permaculture-based lavender farm planned for Butte Creek Canyon near the Honey Run Covered Bridge in Chico, California, opening for U-pick, photo sessions and small events in 2030.","founder":{"@type":"Person","name":"Sophia Somers"},"areaServed":"Chico, California","address":{"@type":"PostalAddress","addressLocality":"Chico","addressRegion":"CA","addressCountry":"US"}}
+</script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://honeyrunlavender.com/">
 <meta property="og:title" content="Honey Run Lavender">
@@ -82,6 +86,17 @@
   .visit li:last-child{border-bottom:0}
   .visit li strong{font-weight:500;min-width:9.5rem;color:var(--lavender)}
 
+  .guide .guide-lede{max-width:56ch;margin:0 0 2.5rem}
+  .guide-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(2rem,6vw,5rem)}
+  .guide h3{font:500 .95rem var(--sans);color:#7a6f78;margin:0 0 .5rem}
+  .guide ul{list-style:none;margin:0;padding:0}
+  .guide li{padding:1rem 0;border-top:1px solid #dcc8bf}
+  .guide li a{font-family:var(--serif);font-size:1.45rem;font-weight:600;text-decoration:none;display:block;line-height:1.2}
+  .guide li a:hover{text-decoration:underline;text-underline-offset:3px}
+  .guide li span{display:block;font-size:.97rem;margin-top:.2rem}
+  footer nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;width:100%}
+  footer nav a{color:var(--ink)}
+  @media (max-width:820px){.guide-grid{grid-template-columns:1fr}}
   .closing{text-align:center}
   .closing p{max-width:46ch;margin:0 auto 2rem}
   footer{padding:2.5rem 0 3rem;font-size:.92rem;border-top:1px solid #dfcbc2}
@@ -100,7 +115,7 @@
 <header class="hero">
   <div class="wrap top">
     <a class="mark" href="#">Honey Run Lavender</a>
-    <nav aria-label="Sections"><a href="#story">Our story</a><a href="#plan">The plan</a><a href="#visit">Visiting</a></nav>
+    <nav aria-label="Sections"><a href="#story">Our story</a><a href="#plan">The plan</a><a href="#visit">Visiting</a><a href="#get-involved">Get involved</a></nav>
   </div>
 
   <div class="wrap hero-copy">
@@ -163,7 +178,34 @@
     </div>
   </section>
 
-  <section class="closing">
+  <section class="guide" id="get-involved" aria-labelledby="guide-title">
+    <div class="wrap">
+      <h2 id="guide-title">Find what you're looking for</h2>
+      <p class="guide-lede">The farm is still taking shape, and your answers decide what it becomes. Pick the survey that fits you.</p>
+      <div class="guide-grid">
+        <nav aria-label="Surveys">
+          <h3>Get involved</h3>
+          <ul>
+            <li><a href="/bloom/">June Bloom Day</a><span>Would you come to a free bloom event with lavender lemonade, matcha, honey ice cream and u-pick bouquets?</span></li>
+            <li><a href="/photographers/">Photographers</a><span>Tell us when you'd book photo sessions among the lavender, and what feels like a fair price.</span></li>
+            <li><a href="/restaurants/">Restaurants and chefs</a><span>Name the organic produce you can't find locally so we grow it in the 2028 garden.</span></li>
+            <li><a href="/business/">Shops, bakeries and offices</a><span>Choose the lavender goods you'd sell, bake with or give as gifts.</span></li>
+          </ul>
+        </nav>
+        <nav aria-label="On this page">
+          <h3>About the farm</h3>
+          <ul>
+            <li><a href="#story">Our story</a><span>Why a lavender farm in Butte Creek Canyon, and who's growing it.</span></li>
+            <li><a href="#plan">The plan, season by season</a><span>From the first 800 plants in 2027 to opening day in 2030.</span></li>
+            <li><a href="#visit">What you'll find when we open</a><span>U-pick, photo sessions, small events, workshops and lavender goods.</span></li>
+            <li><a href="#updates">Get farm updates</a><span>A short email when there's something to see.</span></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" id="updates">
     <div class="wrap">
       <h2>Follow along as it grows</h2>
       <p>I'll send a short note when there's something to see: the first starts, planting day, and the date we open the gate.</p>
@@ -181,6 +223,7 @@
   <div class="wrap">
     <span>Honey Run Lavender · Butte Creek Canyon, Chico, California</span>
     <a href="mailto:info@honeyrunlavender.com">info@honeyrunlavender.com</a>
+    <nav aria-label="Site"><a href="/bloom/">June Bloom Day</a><a href="/photographers/">Photographers</a><a href="/restaurants/">Restaurants</a><a href="/business/">Shops and businesses</a></nav>
   </div>
 </footer>
 
