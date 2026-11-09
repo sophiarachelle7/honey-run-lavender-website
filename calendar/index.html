@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farm Calendar · Honey Run Lavender</title>
+<meta name="description" content="What's happening at Honey Run Lavender, from the first 800 plants in 2027 to opening day in 2030, plus what each season will bring once the farm opens.">
+<link rel="canonical" href="https://honeyrunlavender.com/calendar/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Farm Calendar · Honey Run Lavender">
+<meta property="og:description" content="From the first lavender planting in 2027 to opening day in 2030, and a year at the farm once we open.">
+<meta property="og:image" content="https://honeyrunlavender.com/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--blush:#f6ece8;--sand:#ebdad2;--lavender:#6b4e8c;--ink:#3e3f42;--line:#dcc8bf;--muted:#6a6268;
+        --serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--blush);color:var(--ink);font:400 1.0625rem/1.6 var(--sans)}
+  a{color:var(--lavender)}
+  :focus-visible{outline:2px solid var(--lavender);outline-offset:3px}
+  .wrap{width:min(760px,100% - 3rem);margin-inline:auto}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.5rem 0}
+  .top .mark{font-family:var(--serif);font-size:1.35rem;font-weight:600;text-decoration:none}
+  .top nav{display:flex;gap:1.1rem;flex-wrap:wrap;font-size:.95rem}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.05;color:var(--lavender);margin:1.5rem 0 1rem}
+  .intro{font-size:1.15rem;margin:0 0 3rem;max-width:38em}
+  h2{font-family:var(--serif);font-weight:600;font-size:1.9rem;color:var(--lavender);margin:0 0 .4rem}
+  .lede{margin:0 0 1.75rem;color:var(--muted)}
+  section{padding:2.25rem 0;border-top:1px solid var(--line)}
+
+  /* road to opening: a vertical line of dated stops */
+  .road{list-style:none;margin:0;padding:0;position:relative}
+  .road::before{content:"";position:absolute;left:8.5rem;top:.6rem;bottom:.6rem;width:2px;background:#cdb9b0}
+  .road li{display:grid;grid-template-columns:8.5rem 1fr;gap:0 1.75rem;padding:0 0 1.75rem;position:relative}
+  .road li::after{content:"";position:absolute;left:calc(8.5rem - 6px);top:.45rem;width:14px;height:14px;border-radius:50%;background:var(--blush);border:2px solid #a993c4}
+  .road li.now::after{background:var(--lavender);border-color:var(--lavender)}
+  .road li.open::after{width:18px;height:18px;left:calc(8.5rem - 8px);background:var(--lavender);border-color:var(--lavender)}
+  .when{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--lavender);text-align:right;padding-right:1.4rem;line-height:1.3}
+  .when small{display:block;font-family:var(--sans,inherit);font-size:.85rem;font-weight:400;color:var(--muted)}
+  .road h3{margin:0;font-size:1.08rem;font-weight:500}
+  .road p{margin:.15rem 0 0}
+  .tag{display:inline-block;font-size:.8rem;padding:.05rem .55rem;border-radius:999px;background:#efe6f5;color:var(--lavender);margin-left:.35rem;vertical-align:.1em}
+
+  /* seasons once open */
+  .seasons{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  .season{background:#fffaf8;border:1px solid var(--line);border-radius:14px;padding:1.25rem 1.35rem}
+  .season.bloom{border-color:#a993c4;background:#f3ecf8}
+  .season h3{font-family:var(--serif);font-size:1.45rem;font-weight:600;color:var(--lavender);margin:0}
+  .season .months{font-size:.9rem;color:var(--muted);margin:0 0 .6rem}
+  .season ul{margin:0;padding-left:1.1rem}
+  .season li{margin:.15rem 0}
+
+  .cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.5rem}
+  .btn{display:inline-block;font:500 1rem var(--sans);padding:.8rem 1.5rem;border-radius:999px;background:var(--lavender);color:#fff;text-decoration:none}
+  .btn:hover{background:#5a3f78}
+  .btn.ghost{background:transparent;color:var(--lavender);border:1px solid var(--lavender)}
+  .btn.ghost:hover{background:#efe6f5}
+  footer{padding:2.5rem 0 3rem;font-size:.92rem;border-top:1px solid var(--line);margin-top:1rem;color:var(--muted)}
+  @media (max-width:640px){
+    .seasons{grid-template-columns:1fr}
+    .road::before{left:.45rem}
+    .road li{grid-template-columns:1fr;padding-left:2rem}
+    .road li::after{left:0}
+    .road li.open::after{left:-2px}
+    .when{text-align:left;padding:0}
+    .top{flex-direction:column;gap:.4rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="mark" href="/">Honey Run Lavender</a>
+    <nav aria-label="Site"><a href="/#story">Our story</a><a href="/#plan">The plan</a><a href="/calendar/" aria-current="page">Calendar</a><a href="/#get-involved">Get involved</a></nav>
+  </div>
+
+  <main>
+    <h1>Farm calendar</h1>
+    <p class="intro">Lavender takes a few seasons to settle in. Here's what's happening at the farm between now and opening day, and what each season will look like once the gates open in 2030.</p>
+
+    <section aria-labelledby="road">
+      <h2 id="road">The road to opening day</h2>
+      <p class="lede">Dates are plans, and farms run on weather. We're building in three phases. Sign up for updates and you'll hear as each one happens.</p>
+      <ol class="road">
+        <li class="now"><span class="when">Now</span><div><h3>Help shape the farm <span class="tag">Open</span></h3><p>Short surveys for visitors, photographers, chefs and local shops. Your answers decide what we grow and offer.</p></div></li>
+        <li><span class="when">Phase 1<small>2027</small></span><div><h3>Clearing the land and planting the lavender</h3><p>The hillside is cleared and prepared, and the first 800 Grosso, Phenomenal, Spanish and French lavender plants go in, in rows that follow the slope.</p></div></li>
+        <li><span class="when">Phase 2<small>2028</small></span><div><h3>The organic garden, greenhouse and bees</h3><p>A deer-fenced organic garden, a greenhouse for starts and an apiary tucked in the shade beside them. The first farm honey comes in.</p></div></li>
+        <li><span class="when">Phase 3<small>2028–29</small></span><div><h3>The farm building and dinner deck</h3><p>A farm shop, workshop space and kitchen for lavender goods, plus a deck for farm-to-table dinners, built while the lavender matures.</p></div></li>
+        <li class="open"><span class="when">2030</span><div><h3>Open to visitors</h3><p>U-pick, photo sessions, workshops, farm-to-table dinners and lavender goods made on the farm.</p></div></li>
+        <li><span class="when">June 2030</span><div><h3>First June Bloom Day <span class="tag">Planned</span></h3><p>A free day to wander the rows in full bloom, with lavender lemonade, iced lavender matcha, lavender honey ice cream and u-pick bouquets.</p></div></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="year">
+      <h2 id="year">A year at the farm, once we open</h2>
+      <p class="lede">What to expect season by season from 2030 on.</p>
+      <div class="seasons">
+        <div class="season"><h3>Spring</h3><p class="months">March to May</p><ul><li>Garden workshops and plant starts</li><li>Bees back at work in the canyon</li><li>First fresh produce from the garden</li></ul></div>
+        <div class="season bloom"><h3>Bloom</h3><p class="months">June and July</p><ul><li>June Bloom Day</li><li>U-pick bundles and bouquets</li><li>Photo sessions among the rows</li><li>Farm-to-table dinners on the deck</li></ul></div>
+        <div class="season"><h3>Harvest</h3><p class="months">August to October</p><ul><li>Drying and bundling lavender</li><li>Honey harvest</li><li>Dinners as the evenings cool</li></ul></div>
+        <div class="season"><h3>Winter</h3><p class="months">November to February</p><ul><li>Wreath and gift workshops</li><li>Lavender goods for the holidays</li><li>The fields rest</li></ul></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="follow">
+      <h2 id="follow">Don't miss a season</h2>
+      <p class="lede">Get a short email when there's something to see, or tell us what you'd like the farm to offer.</p>
+      <div class="cta"><a class="btn" href="/#updates">Get farm updates</a><a class="btn ghost" href="/#get-involved">Take a survey</a></div>
+    </section>
+  </main>
+
+  <footer>Honey Run Lavender · Butte Creek Canyon, Chico, California · <a href="mailto:info@honeyrunlavender.com">info@honeyrunlavender.com</a></footer>
+</div>
+</body>
+</html>
